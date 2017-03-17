@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html data-ng-app="connect">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>App</title>
+        <meta name="description" content="App">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">    
+    </head>
+    <body>
+
+<section class="SectionAlfa">        
+     <header class="HeaderBeneficios">            
+           <div class="ImgHeaderAlfa">
+                 <img class="HexagonoHeader" src="img/Icons/hexagon1.svg">
+                  <img class="ImgHeaderIcon" src="img/Icons/ideia2.svg">
+          </div>            
+         <p class="PHeaderN1">Beneficios</p>            
+    </header>
+        
+    <section class="Inicial Fundo">        
+                  <img  class="Img-Fundo" src="img/fundo-azul.jpg">        
+                     <div class="Scroll">
+                   <div class="containerI">
+                   <img class="ImgAvataLogoI" src="img/Icons/ideia.svg">
+
+          <form>         
+            
+          <div class="groupI">      
+            <input  class="InputI" type="text" required data-ng-model="beneficio.nome">
+            <span class="highlightI"></span>
+            <span class="barI"></span>
+            <label class="labelI">Nome:</label>
+          </div>
+            
+          <div class="groupI">      
+            <input  class="InputI" type="NUmber" required data-ng-model="beneficio.cpf">
+            <span class="highlightI"></span>
+            <span class="barI"></span>
+            <label class="labelI">CPF:</label>
+          </div>
+            
+          <div class="groupI">      
+            <input  class="InputI" type="text" required data-ng-model="beneficio.endereco">
+            <span class="highlightI"></span>
+            <span class="barI"></span>
+            <label class="labelI">Endereço:</label>
+          </div>
+              
+              
+            <div class="AjudaDeCustos SelecioneSetor">
+                    <div class="DivSelect">
+                      <p class="PBN1">Selecione o Setor</p>
+                <div class="select-style">
+                    <select class="SelectBeneficios" data-ng-model="beneficio.secretaria">
+                        <option value="Administração">Sec. Administração</option>
+                        <option value="Assistência Social">Sec. Assistência Social</option>
+                        <option value="Agricultura">Sec. Agricultura</option>
+                        <option value="Saúde">Sec. Saúde</option>
+                        <option value="Cultura">Sec. Cultura</option>
+                        <option value="Finanças">Sec. Finanças</option>
+                        <option value="Obras">Sec. Obras</option>
+                        <option value="Transportes">Sec. Transporte</option>
+                        <option value="Educação">Sec. Educação</option>
+                        <option value="Assuntos Estratégicos">Sec.Assuntos Estratégicos</option>
+                    </select>
+                </div>
+                </div>
+              </div>
+              
+               <div class="AjudaDeCustos SelecioneBeneficios">
+                <div class="DivSelect">
+                      <p class="PBN1">Selecione o categoria do Beneficios</p>
+                      <div class="select-style">
+                          <select class="SelectBeneficios" data-ng-model="beneficio.tipoDeBeneficio">
+                              <option value="AjudaDeCusto">Ajuda de custo</option>
+                              <option value="Passagem">Passagem</option>
+                              <option value="Remedio">Remedio</option>
+                              <option value="Viagem">Viagem</option>
+                              <option value="CarroPipa">Carro pipa</option>
+                              <option value="Ração">Ração</option>
+                              <option value="LimpezaDeBarragem">Limpeza de barragem</option>
+                              <option value="Poço">Poço Artesiano</option>
+                              <option value="Combustivel">Combustivel</option>
+                              <option value="Contrato">Contrato</option>
+                              <option value="Exames">Exames</option>
+                              <option value="ConsultaMedica">Consulta Médica</option>
+                              <option value="EquipamentosHospitalares">Equipamentos Hospitalares</option>
+                          </select>
+                      </div>
+
+                </div>
+              </div>
+            
+              
+              <div class="AjudaDeCustos AjudaDeCusto" ng-show="beneficio.tipoDeBeneficio === 'AjudaDeCusto' ">
+                <p class="PBN1">Ajuda de custo</p>
+                <input class="inputBeneficiosNone3" required="" placeholder="Quanto" type="number">
+              </div>
+                
+             <div class="AjudaDeCustos AjudaDeCustos5 Viagem" data-ng-show="beneficio.tipoDeBeneficio === 'Viagem' ">
+                <p class="PBN1">Viagem</p>
+   
+                 
+                <input class="InputBuscaRemedio" required="" placeholder="Tipo" name="Viagem" type="checkbox" id="DivBuscaViagem">
+                <label class="DivBuscaRemedio4" for="DivBuscaViagem">Local</label>
+                <label class="DivBuscaRemedio3" for="DivBuscaViagem"></label>
+                
+                  <div class="DivBuscaRemedio">
+                    <div class="DivEstatisticaBeneficios BuscaLT2">
+                     <input  id="EstMoradia" type="checkbox" >
+                     <label class="buscaLT" for="EstMoradia"><img src="img/Icons/lupa.svg"></label>
+                    <input class="IPEstatisticaMoradia1" title="text" placeholder="Buscar poor comunidades">
+            </div>
+                    
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="PauloAfonso" name="Viagem"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="PauloAfonso">
+                            <p class="PBeneficiosBPf">Paulo Afonso</p> </label>
+                     </div>
+                   </div>
+                      
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Coruripe" name="Viagem"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Coruripe">
+                            <p class="PBeneficiosBPf">Coruripe</p> </label>
+                     </div>
+                   </div>
+                      
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Maceio" name="Viagem"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Maceio">
+                            <p class="PBeneficiosBPf">Maceio</p> </label>
+                     </div>
+                   </div>
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Garanhuns" name="Viagem"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Garanhuns">
+                            <p class="PBeneficiosBPf">Garanhuns</p> </label>
+                     </div>
+                   </div>
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Recife" name="Viagem"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Recife">
+                            <p class="PBeneficiosBPf">Recife</p> </label>
+                     </div>
+                   </div>
+                       <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Aracaju" name="Viagem"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Aracaju">
+                            <p class="PBeneficiosBPf">Aracaju</p> </label>
+                     </div>
+                   </div>
+                      
+                      
+                  </div>
+                  
+              </div>
+              
+              <div class="AjudaDeCustos AjudaDeCustos5 Viagem" data-ng-show="beneficio.tipoDeBenefico === 'Passagem' ">
+                <p class="PBN1">Passagem</p>
+   
+                 
+                <input class="InputBuscaRemedio" required="" placeholder="Tipo" name="Passagem" type="checkbox" id="DivBuscaPassagem">
+                <label class="DivBuscaRemedio4" for="DivBuscaPassagem">Local</label>
+                <label class="DivBuscaRemedio3" for="DivBuscaPassagem"></label>
+                  
+                  <div class="DivBuscaRemedio">
+                    <div class="DivEstatisticaBeneficios BuscaLT2">
+                       <input  id="EstMoradia" type="checkbox" >
+                       <label class="buscaLT" for="EstMoradia"><img src="img/Icons/lupa.svg"></label>
+                      <input class="IPEstatisticaMoradia1" title="text" placeholder="Buscar poor comunidades" ng-model="buscaPassagem">
+                     </div>
+                    
+                  <div class="SubMenuBeneficios7" data-ng-repeat="passagem in passagens | limitTo : 6 | filter: buscaPassagem">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="{{passagem._id}}" name="Passagem"  type="radio">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="{{passagem._id}}">
+                            <p class="PBeneficiosBPf">{{passagem.nome}}</p> </label>
+                     </div>
+                   </div>
+                      
+                      
+                  </div>
+                  
+              </div>
+                    
+              
+              <div class="AjudaDeCustos Remedio" data-ng-show="beneficio.tipoDeBeneficio === 'Remedio' ">
+                <p class="PBN1">Remedio</p>
+                  
+                   <div class="DivSelect">
+                <div class="select-style">
+                    <select class="SelectBeneficios">
+                        <option value="Quantos">Quantos tipos de remedios</option>
+                        <option value="Remedio1">1</option>
+                        <option value="Remedio2">2</option>
+                        <option value="Remedio3">3</option>
+                        <option value="Remedio4">4</option>
+                        <option value="Remedio5">5</option>
+                        <option value="Remedio6">6</option>
+                        <option value="Remedio7">7</option>
+                        <option value="Remedio8">8</option>
+                        <option value="Remedio8">8</option>
+                        <option value="Remedio10">10</option>
+                    </select>
+                </div>
+
+          </div>
+                 
+                  <div class="PLM">
+                <input class="InputBuscaRemedio" required="" placeholder="Tipo" name="Exame" type="checkbox" id="DivBuscaRemedio3">
+                <label class="DivBuscaRemedio4" for="DivBuscaRemedio3">Qual o remedio</label>
+                <label class="DivBuscaRemedio3" for="DivBuscaRemedio3"></label>
+                  
+                  <div class="DivBuscaRemedio">
+                    <div class="DivEstatisticaBeneficios BuscaLT2">
+                     <input  id="EstMoradia" type="checkbox" >
+                     <label class="buscaLT" for="EstMoradia"><img src="img/Icons/lupa.svg"></label>
+                    <input class="IPEstatisticaMoradia1" title="text" placeholder="Buscar poor comunidades">
+            </div>
+                    
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Remedio1" name="Radio10"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Remedio1">
+                            <p class="PBeneficiosBPf">Remedio 1</p> </label>
+                     </div>
+                   </div>
+                      
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Remedio2" name="Radio10"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Remedio2">
+                            <p class="PBeneficiosBPf">Remedio 2</p> </label>
+                     </div>
+                   </div>
+                      
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Remedio2" name="Radio10"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Remedio2">
+                            <p class="PBeneficiosBPf">Remedio 2</p> </label>
+                     </div>
+                   </div>
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Remedio2" name="Radio10"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Remedio2">
+                            <p class="PBeneficiosBPf">Remedio 2</p> </label>
+                     </div>
+                   </div>
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Remedio2" name="Radio10"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Remedio2">
+                            <p class="PBeneficiosBPf">Remedio 2</p> </label>
+                     </div>
+                   </div>
+                       <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Remedio2" name="Radio10"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Remedio2">
+                            <p class="PBeneficiosBPf">Remedio 2</p> </label>
+                     </div>
+                   </div>
+                      
+                      
+                  </div>
+                  
+                  
+          <div class="DivSelect">
+                <div class="select-style">
+                    <select class="SelectBeneficios">
+                        <option value="Quantos remedios">Quantos remedios</option>
+                        <option value="RemedioQunatidade1">1</option>
+                        <option value="RemedioQunatidade2">2</option>
+                        <option value="RemedioQunatidade3">3</option>
+                        <option value="RemedioQunatidade4">4</option>
+                        <option value="RemedioQunatidade5">5</option>
+                        <option value="RemedioQunatidade6">6</option>
+                        <option value="RemedioQunatidade7">7</option>
+                        <option value="RemedioQunatidade8">8</option>
+                        <option value="RemedioQunatidade9">9</option>
+                        <option value="RemedioQunatidade10">10</option>
+                    </select>
+                </div>
+
+          </div>
+                      </div>
+              </div>
+              
+              <div class="AjudaDeCustos Racao" data-ng-show="beneficio.tipoDeBeneficio === 'Ração' ">
+                <p class="PBN1">Ração</p>
+                  
+                   <div class="DivSelect">
+                <div class="select-style">
+                    <select class="SelectBeneficios" data-ng-model="beneficio.beneficio">
+                        <option value="RacaoQuantos">Quantos</option>
+                        <option value="RacaoQuantos1">1</option>
+                        <option value="RacaoQuantos2">2</option>
+                        <option value="RacaoQuantos3">3</option>
+                        <option value="RacaoQuantos4">4</option>
+                        <option value="RacaoQuantos5">5</option>
+                        <option value="RacaoQuantos6">6</option>
+                        <option value="RacaoQuantos7">7</option>
+                        <option value="RacaoQuantos8">8</option>
+                        <option value="RacaoQuantos9">9</option>
+                        <option value="RacaoQuantos10">10</option>
+                    </select>
+                </div>
+
+          </div>
+                                    
+              </div>
+              
+              <div class="AjudaDeCustos LimpezaDeBarragem" data-ng-show="beneficio.tipoDeBeneficio === 'LimpezaDeBarragem' ">
+                <p class="PBN1">Limpeza de barragem</p>
+                  <input class="inputBeneficiosNone3" required="" placeholder="Quantas horas" type="number">                
+              </div>
+              
+              <div class="AjudaDeCustos PocoArtesiano" data-ng-show="beneficio.tipoDeBeneficio === 'Poço' ">
+                <p class="PBN1">Poço Artesiano</p>
+                  <input class="inputBeneficiosNone3" required="" placeholder="Quantos Metros" type="number">                
+              </div>
+              
+              <div class="AjudaDeCustos AjudaDeCustos4 Combustivel" data-ng-show="beneficio.tipoDeBeneficio === 'Combustivel' ">
+                <p class="PBN1">Combustivel</p> 
+                
+              <div class="SubMenuBeneficios8">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Combustivel1" name="Radio1"  type="radio" value="Diesel">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT LabelBtnT2" for="Combustivel1">
+                            <p class="PBeneficiosBPf">Diesel</p> </label>
+                     </div>
+                   </div>
+                  
+                   <div class="SubMenuBeneficios8">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Combustivel2" name="Radio1"  type="radio" value="Gasolina">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT LabelBtnT2" for="Combustivel2">
+                            <p class="PBeneficiosBPf">Gasolina</p> </label>
+                     </div>
+                   </div>
+                  
+              </div>
+              
+              <div class="AjudaDeCustos Contrato" data-ng-show="beneficio.tipoDeBeneficio === 'Contrato' ">
+                <p class="PBN1">Contrato</p>
+                  <input class="inputBeneficiosNone3" required="" placeholder="Valor" type="number" value="beneficio.contrato.valor">                
+              </div>
+              
+              <div class="AjudaDeCustos Exame" data-ng-show="beneficio.tipoDeBeneficio === 'Exames' ">
+                <p class="PBN1">Exame</p>
+                 
+                 
+                <input class="InputBuscaRemedio" required="" placeholder="Tipo" name="Exame" type="checkbox" id="DivBuscaRemedio">
+                <label class="DivBuscaRemedio4" for="DivBuscaRemedio">Qual o exame</label>
+                <label class="DivBuscaRemedio3" for="DivBuscaRemedio"></label>
+                  
+                  <div class="DivBuscaRemedio">
+                    <div class="DivEstatisticaBeneficios BuscaLT2">
+                     <input  id="EstMoradia" type="checkbox" >
+                     <label class="buscaLT" for="EstMoradia"><img src="img/Icons/lupa.svg"></label>
+                    <input class="IPEstatisticaMoradia1" title="text" placeholder="Buscar por comunidades" data-ng-model="buscaExame">
+                  </div>
+
+                    <div class="SubMenuBeneficios7" data-ng-repeat="exame in exames | limitTo : 6 | filter: buscaExame">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="{{exame._id}}" name="Exame"  type="radio" >
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="{{exame._id}}">
+                            <p class="PBeneficiosBPf">{{exame.nome}}</p> </label>
+                     </div>
+                   </div>
+  
+                      
+                      
+                  </div>
+                  
+              
+
+            </div>
+              
+              <div class="AjudaDeCustos ConsultaMedica" data-ng-show="beneficio.tipoDeBeneficio === 'ConsultaMedica' ">
+                <p class="PBN1">Consulta medica</p>
+                  
+                 
+                  
+                <input class="InputBuscaRemedio" required="" placeholder="Tipo" name="Consulta" type="checkbox" id="DivBuscaConsulta">
+                <label class="DivBuscaRemedio4" for="DivBuscaConsulta">Consulta medica</label>
+                <label class="DivBuscaRemedio3" for="DivBuscaConsulta"></label>
+                  
+                  <div class="DivBuscaRemedio">
+                    <div class="DivEstatisticaBeneficios BuscaLT2">
+                     <input  id="EstMoradia" type="checkbox" >
+                     <label class="buscaLT" for="EstMoradia"><img src="img/Icons/lupa.svg"></label>
+                    <input class="IPEstatisticaMoradia1" title="text" placeholder="Buscar poor comunidades">
+            </div>
+                    
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Consulta1" name="Consulta"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Consulta1">
+                            <p class="PBeneficiosBPf">Consulta 1</p> </label>
+                     </div>
+                   </div>
+                      
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Consulta2" name="Consulta"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Consulta2">
+                            <p class="PBeneficiosBPf">Consulta 2</p> </label>
+                     </div>
+                   </div>
+                      
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Consulta3" name="Consulta"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Consulta3">
+                            <p class="PBeneficiosBPf"> Consulta 3 </p> </label>
+                     </div>
+                   </div>
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Consulta4" name="Consulta"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Consulta4">
+                            <p class="PBeneficiosBPf">Consulta 4</p> </label>
+                     </div>
+                   </div>
+                      <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Remedio2" name="Consulta"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Remedio2">
+                            <p class="PBeneficiosBPf">Remedio 2</p> </label>
+                     </div>
+                   </div>
+                       <div class="SubMenuBeneficios7">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Remedio2" name="Consulta"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        <label class="LabelBtnT" for="Remedio2">
+                            <p class="PBeneficiosBPf">Remedio 2</p> </label>
+                     </div>
+                   </div>                     
+                      
+                  </div>                 
+                      
+              </div>
+              
+              <div class="AjudaDeCustos AjudaDeCustos4 EquipamentosHospitalares" data-ng-show="beneficio.tipoDeBeneficio === '' ">
+                <p class="PBN1">Equipamentos hospitalares</p> 
+                
+                  <div class="SubMenuBeneficios9">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Cadeira" name="Equipamentos"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        
+                        <label class="LabelBtnT LabelBtnT2 DivSubMenuBeneficios8" for="Cadeira">
+                            <p class="PBeneficiosBPf">Cadeira de rodas</p> 
+                        </label>
+                        
+                     </div>
+                   </div>
+                  
+                  <div class="SubMenuBeneficios9">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Oculos" name="Equipamentos"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        
+                        <label class="LabelBtnT LabelBtnT2 DivSubMenuBeneficios8" for="Oculos">
+                            <p class="PBeneficiosBPf">Oculos</p> 
+                        </label>
+                        
+                     </div>
+                   </div>
+                  
+                  <div class="SubMenuBeneficios9">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="auditivo" name="Equipamentos"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        
+                        
+                        <label class="LabelBtnT LabelBtnT2 DivSubMenuBeneficios8" for="auditivo">
+                            <p class="PBeneficiosBPf">Aparelho auditivo</p> 
+                        </label>
+                        
+                     </div>
+                   </div>
+                  
+                   <div class="SubMenuBeneficios9">
+                    <input class="inputMAgricultura inputBeneficiosBtf" id="Muletas" name="Equipamentos"  type="radio"  name="" value="">
+                    <div class="DivSubMenuBeneficios7">
+                        
+                        <label class="LabelBtnT LabelBtnT2 DivSubMenuBeneficios8" for="Muletas">
+                            <p class="PBeneficiosBPf">Muletas</p> 
+                        </label>
+                    
+                     </div>
+                   </div>
+                  
+              </div>
+              
+          </form>
+          </div>
+              
+              </div>
+
+               <input  class="EfeitoNinja" id="Efeitoninja" type="radio"  >
+                     <div>
+                        <div class="toggleNinja">
+                            <label class="LabelBtn" for="Efeitoninja" ng-click="cadastrarBeneficio(beneficio)"><img src="img/Icons/air.svg"></label>
+                        </div>         
+                     </div>
+       
+  
+
+  
+          <div class="Enviado">
+                    <p>{{codeBeneficios}}</p>
+              <a data-ng-click="backTo()" ><button>Cadastrar Novo</button></a>
+          </div>
+
+          <div class="Linha"></div> 
+
+          <div class="Voo"><img src="img/Icons/air.svg"></div>
+
+
+</section>
+    
+        
+            </div>
+        </section>
+    </body>
+</html>
+
+    
+
