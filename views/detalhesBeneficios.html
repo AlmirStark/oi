@@ -1,0 +1,287 @@
+
+<section class="SectionAlfa ng-scope">
+        
+       <header class="HeaderBeneficios1">
+          <div class="ImgHeaderAlfa">
+              <img class="HexagonoHeader" src="img/Icons/hexagon1.svg">
+              <a href="#/listaBeneficios">
+                <img class="ImgHeaderBack" src="img/Icons/arrow.svg">
+              </a>
+              <img class="ImgHeaderIcon" src="img/Icons/ideia2.svg">
+          </div>
+          <p class="PHeaderN1">Detalhe Beneficios</p>
+           <input id="HeaderPerfil" type="checkbox">
+             <label class="PerfilHeader" for="HeaderPerfil">
+               <img class="ImgPP" src="img/Icons/user.svg">
+               </label>
+           <label class="PerfilHeader2" for="HeaderPerfil">
+               </label>
+           
+               <div class="Perfil">
+        <div class="DivPerfil">
+            <span>
+              <img src="img/Icons/Perfil.svg">
+              {{beneficio.nome}}
+              </span>
+        </div>
+        <div class="DivPerfil">
+            <span><img src="img/Icons/map.svg">{{beneficio.endereco}}</span>
+        </div>
+        <div class="DivPerfil">
+            <span>
+                <img src="img/Icons/card.svg">
+                {{beneficio.cpf}}
+            </span>
+        </div>
+        
+    </div>
+       </header>
+            
+<section class="Inicial Fundo">
+    <img class="Img-Fundo" src="img/fundo-azul.jpg">
+        
+    
+    
+  <div class="Scroll">
+<div class="DivBeneficiosTd">    
+    
+      <ul class="UlBeneficios" data-ng-show="beneficio.setor === 'Administração' ">
+          <input class="InputBeneficios" id="Administração" name="RadioBeneficios" type="checkbox"  checked>
+          <label for="Administração">
+          <li>
+            <img class="IMG3" src="img/Icons/Administra%C3%A7ao.svg">
+              
+            <section class="Divconcluido">
+              <input id="ConcluidoAdministração"  type="checkbox">
+              <label class="LabelConcluido" for="ConcluidoAdministração">
+                <img class="ImgConcluido" src="img/Icons/check.svg">
+                </label>
+              <p>Concluido</p>
+              </section>
+              
+            <p class="BP1">Sec. Administração</p>
+            <p class="BP2">{{beneficio.dataCadastro}}</p>
+            <div>
+                <p class="BP3">Gardenal</p>
+                <p class="BP4">12</p>
+            </div>
+          </li>
+          </label>
+    </ul>
+      <ul class="UlBeneficios" data-ng-show="beneficio.setor === 'Assistência Social' ">
+          <input class="InputBeneficios" id="Social" name="RadioBeneficios" type="checkbox"  checked>
+          <label for="Social">
+          <li>
+            <img class="IMG3" src="img/Icons/social.svg">
+              
+            <section class="Divconcluido">
+              <input id="ConcluidoSocial"  type="checkbox">
+              <label class="LabelConcluido" for="ConcluidoSocial">
+                <img class="ImgConcluido" src="img/Icons/check.svg">
+                </label>
+              <p>Concluido</p>
+              </section>
+              
+            <p class="BP1">Sec. Assistência Social</p>
+            <p class="BP2">{{beneficio.dataCadastro}}</p>
+            <div>
+                <p class="BP3">Gardenal</p>
+                <p class="BP4">12</p>
+            </div>
+          </li>
+          </label>
+    </ul>
+      <ul class="UlBeneficios" data-ng-show="beneficio.setor === 'Agricultura' ">
+          <input class="InputBeneficios" id="Agricultural" name="RadioBeneficios" type="checkbox"  checked>
+          <label for="Agricultural">
+          <li>
+            <img class="IMG3" src="img/Icons/agricultura.svg">
+              
+            <section class="Divconcluido">
+              <input id="ConcluidoAgricultural"  type="checkbox">
+              <label class="LabelConcluido" for="ConcluidoAgricultural">
+                <img class="ImgConcluido" src="img/Icons/check.svg">
+                </label>
+              <p>Concluido</p>
+              </section>
+              
+            <p class="BP1">Sec. Agricultural</p>
+            <p class="BP2">{{beneficio.dataCadastro}}</p>
+            <div>
+                <p class="BP3">Gardenal</p>
+                <p class="BP4">12</p>
+            </div>
+          </li>
+          </label>
+    </ul>
+      <ul class="UlBeneficios" data-ng-show="beneficio.setor === 'Saúde' ">
+          <input class="InputBeneficios" id="Saude" name="RadioBeneficios" type="checkbox"  checked>
+          <label for="Saude">
+          <li>
+            <img class="IMG3" src="img/Icons/saude.svg">
+              
+            <section class="Divconcluido">
+              <input id="ConcluidoSaude"  type="checkbox">
+              <label class="LabelConcluido" for="ConcluidoSaude">
+                <img class="ImgConcluido" src="img/Icons/check.svg">
+                </label>
+              <p>Concluido</p>
+              </section>
+              
+            <p class="BP1">Sec. Saúde</p>
+            <p class="BP2">{{beneficio.dataCadastro}}</p>
+            <div>
+                <p class="BP3">Gardenal</p>
+                <p class="BP4">12</p>
+            </div>
+          </li>
+          </label>
+    </ul>
+      <ul class="UlBeneficios" data-ng-show="beneficio.setor === 'Cultura' ">
+          <input class="InputBeneficios" id="Cultura" name="RadioBeneficios" type="checkbox"  checked>
+          <label for="Cultura">
+          <li>
+            <img class="IMG3" src="img/Icons/cultura.svg">
+              
+            <section class="Divconcluido">
+              <input id="ConcluidoCultura"  type="checkbox">
+              <label class="LabelConcluido" for="ConcluidoCultura">
+                <img class="ImgConcluido" src="img/Icons/check.svg">
+                </label>
+              <p>Concluido</p>
+              </section>
+              
+            <p class="BP1">Sec. Cultura</p>
+            <p class="BP2">{{beneficio.dataCadastro}}</p>
+            <div>
+                <p class="BP3">Gardenal</p>
+                <p class="BP4">12</p>
+            </div>
+          </li>
+          </label>
+    </ul>
+      <ul class="UlBeneficios" data-ng-show="beneficio.setor === 'Finanças' ">
+          <input class="InputBeneficios" id="Finanças" name="RadioBeneficios"  type="checkbox"  checked>
+          <label for="Finanças">
+          <li>
+            <img class="IMG3" src="img/Icons/dinheiro.svg">
+              
+            <section class="Divconcluido">
+              <input id="ConcluidoFinanças"  type="checkbox">
+              <label class="LabelConcluido" for="ConcluidoFinanças">
+                <img class="ImgConcluido" src="img/Icons/check.svg">
+                </label>
+              <p>Concluido</p>
+              </section>
+              
+            <p class="BP1">Sec. Finanças</p>
+            <p class="BP2">{{beneficio.dataCadastro}}</p>
+            <div>
+                <p class="BP3">Gardenal</p>
+                <p class="BP4">12</p>
+            </div>
+          </li>
+          </label>
+    </ul>
+      <ul class="UlBeneficios" data-ng-show="beneficio.setor === 'Obras' ">
+          <input class="InputBeneficios" id="Obras" name="RadioBeneficios" type="checkbox"  checked>
+          <label for="Obras">
+          <li>
+            <img class="IMG3" src="img/Icons/Obras.svg">
+              
+            <section class="Divconcluido">
+              <input id="ConcluidoObras"  type="checkbox">
+              <label class="LabelConcluido" for="ConcluidoObras">
+                <img class="ImgConcluido" src="img/Icons/check.svg">
+                </label>
+              <p>Concluido</p>
+              </section>
+              
+            <p class="BP1">Sec. Obras</p>
+            <p class="BP2">{{beneficio.dataCadastro}}</p>
+            <div>
+                <p class="BP3">Gardenal</p>
+                <p class="BP4">12</p>
+            </div>
+          </li>
+          </label>
+    </ul>
+      <ul class="UlBeneficios" data-ng-show="beneficio.setor === 'Transportes' ">
+          <input class="InputBeneficios" id="Transporte" name="RadioBeneficios" type="checkbox"  checked>
+          <label for="Transporte">
+          <li>
+            <img class="IMG3" src="img/Icons/car.svg">
+              
+            <section class="Divconcluido">
+              <input id="ConcluidoTransporte"  type="checkbox">
+              <label class="LabelConcluido" for="ConcluidoTransporte">
+                <img class="ImgConcluido" src="img/Icons/check.svg">
+                </label>
+              <p>Concluido</p>
+              </section>
+              
+            <p class="BP1">Sec. Transporte</p>
+            <p class="BP2">{{beneficio.dataCadastro}}</p>
+            <div>
+                <p class="BP3">Gardenal</p>
+                <p class="BP4">12</p>
+            </div>
+          </li>
+          </label>
+    </ul>
+      <ul class="UlBeneficios" data-ng-show="beneficio.setor === 'Educação' ">
+          <input class="InputBeneficios" id="Educação" name="RadioBeneficios" type="checkbox"  checked>
+          <label for="Educação">
+          <li>
+            <img class="IMG3" src="img/Icons/caderno.svg">
+              
+            <section class="Divconcluido">
+              <input id="ConcluidoEducação"  type="checkbox">
+              <label class="LabelConcluido" for="ConcluidoEducação">
+                <img class="ImgConcluido" src="img/Icons/check.svg">
+                </label>
+              <p>Concluido</p>
+              </section>
+              
+            <p class="BP1">Sec. Educação</p>
+            <p class="BP2">{{beneficio.dataCadastro}}</p>
+            <div>
+                <p class="BP3">Gardenal</p>
+                <p class="BP4">12</p>
+            </div>
+          </li>
+          </label>
+    </ul>
+      <ul class="UlBeneficios" data-ng-show="beneficio.setor === 'Assuntos Estratégicos' ">
+          <input class="InputBeneficios" id="Assuntos" name="RadioBeneficios" type="checkbox"  checked>
+          <label for="Assuntos">
+          <li>
+            <img class="IMG3" src="img/Icons/Idea.svg">
+              
+            <section class="Divconcluido">
+              <input id="ConcluidoAssuntos"  type="checkbox">
+              <label class="LabelConcluido" for="ConcluidoAssuntos">
+                <img class="ImgConcluido" src="img/Icons/check.svg">
+                </label>
+              <p>Concluido</p>
+              </section>
+              
+            <p class="BP1">Sec. Assuntos Estratégicos</p>
+            <p class="BP2">{{beneficio.dataCadastro}}</p>
+            <div>
+                <p class="BP3">Gardenal</p>
+                <p class="BP4">12</p>
+            </div>
+          </li>
+          </label>
+    </ul>
+           
+</div>     
+      
+     
+    
+    </div>
+  
+    </section>
+    
+    </section>
